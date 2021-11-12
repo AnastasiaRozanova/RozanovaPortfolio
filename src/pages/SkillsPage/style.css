@@ -1,0 +1,44 @@
+.header-postheading {
+  font-size: 15px;
+  line-height: 1.75em;
+  font-weight: 400;
+  color: #888;
+  margin: 0 0 20px;
+}
+.technology-wrapper {
+  display: flex;
+  margin-bottom: 30px;
+}
+.technology-name {
+  color: #101010;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.75em;
+  width: 22%;
+}
+.technology-list {
+  font-size: 17px;
+  line-height: 1.75em;
+  font-weight: 400;
+  color: #888;
+}
+@media (max-width: 1366px) {
+  .page-row {
+    width: 100%;
+    font-size: 2.3vh;
+    line-height: 3.5vh;
+  }
+  .technology-wrapper {
+    flex-direction: column;
+    margin-bottom: 3vh;
+  }
+  .technology-name {
+    margin-bottom: 0.5vh;
+  }
+  .header-postheading,
+  .technology-name,
+  .technology-list {
+    font-size: 2.3vh;
+    line-height: 4vh;
+  }
+}

@@ -1,0 +1,130 @@
+.home-wrapper {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-bg-wrapper {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+}
+.page-bg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 16, 16, 0.7);
+  z-index: -10;
+}
+.video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  z-index: -15;
+}
+.content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+.content-header {
+  font-size: 45px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.content-header span:first-child {
+  margin-right: 20px;
+}
+.content-text {
+  position: relative;
+  width: 25ch;
+  font-size: 28px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #888;
+  animation: printed-text 20s steps(25) infinite, flashing-border 0.75s step-end infinite;
+}
+.arrow {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(-45deg);
+  animation: dropdown 1s infinite;
+  z-index: 100;
+  cursor: pointer;
+}
+@keyframes flashing-border {
+  0% {
+    border-color: #888;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #888;
+  }
+}
+@keyframes printed-text {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 25ch;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes dropdown {
+  0% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .home-wrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .content-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-header span:first-child {
+    margin-right: 0;
+  }
+  .content-header span:last-child {
+    letter-spacing: 1px;
+  }
+}
